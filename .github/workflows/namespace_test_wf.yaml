@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on:
+      - namespace-ankit-test
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup npm cache
+        uses: namespacelabs/nscloud-cache-action@v1
+        with:
+          path: |
+            ~/.npm
+            ./node_modules
+      - name: Install dependencies
+        run: npm install

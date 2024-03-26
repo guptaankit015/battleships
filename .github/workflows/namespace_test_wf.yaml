@@ -5,6 +5,10 @@ jobs:
   tests:
     runs-on:
       - namespace-profile-ankit-test
+    strategy:
+      matrix: 
+        a: [1,2,3,4,5,6,7,8,9,10]
+        b: [1,2,3]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

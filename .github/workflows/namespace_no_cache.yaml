@@ -1,0 +1,16 @@
+name: namespace_no_cache
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on:
+      - namespace-profile-ankit-test
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3

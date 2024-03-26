@@ -16,3 +16,5 @@ jobs:
             ./node_modules
       - name: Install dependencies
         run: npm install
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3

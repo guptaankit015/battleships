@@ -4,7 +4,7 @@ on:
 jobs:
   tests:
     runs-on:
-      - namespace-ankit-test
+      - namespace-profile-ankit-test
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
